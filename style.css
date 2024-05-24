@@ -5,10 +5,9 @@
 }
 
 .container {
-    position: relative;
     width: 100%;
     height: 100vh;
-    background: url(img/desert.jpeg) no-repeat center;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/desert.jpeg);
     background-position: center;
     background-size: cover;
     padding-left: 8%;
@@ -16,21 +15,10 @@
     box-sizing: border-box;
 }
 
-.container::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity to make it darker or lighter */
-    z-index: 1;
-}
 .navbar{
     height: 12%;
     display: flex;
     align-items: center;
-
 }
 
 .logo {
@@ -42,6 +30,7 @@
     width: 70px;
     cursor: pointer;
     padding-left: 80px;
+    color: #fff;
 }
 
 nav {
@@ -58,5 +47,90 @@ nav ul li {
 nav ul li a {
     text-decoration: none;    
     color: white;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+nav ul li a:hover{
+    color: #8B4513;
+    transition: .3s ease-in-out;
+}
+
+.row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col {
+    flex-basis: 50%;
+}
+
+h1{
+    color: #fff;
+    font-size: 100px;
+
+}
+p{
+    color: #fff;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+button{
+    width: 100px;
+    color: #000;
     font-size: 15px;
+    font-weight: 500;
+    padding: 12px 0;
+    background: #fff;
+    border: 2px solid #8B4513;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}
+
+button:hover{
+    background: transparent;
+    color: #8B4513;
+}
+
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.card1 {
+    background-image: url(img/Serenity-Sundown.jpeg);
+}
+.card2 {
+    background-image: url(img/Sonoran-Desert.jpeg);
+}
+.card3 {
+    background-image: url(img/gobi-desert.jpeg);
+}
+.card4 {
+    background-image: url(img/pyramids-of-giza-ancient.jpeg);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+h5{
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+.card p{
+    text-shadow: 0 0 15px #000;
+    font-size: 8px;
 }
